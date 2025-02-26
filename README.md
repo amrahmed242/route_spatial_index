@@ -1,4 +1,7 @@
-# Route Spatial Index
+# Route Spatial Index 🗺️
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Pub Points](https://img.shields.io/pub/points/route_spatial_index)
+![Pub Version](https://img.shields.io/pub/v/route_spatial_index)
 
 A highly optimized spatial indexing library for finding the nearest point on a route. This package is designed for performance with large geographic datasets, making it ideal for navigation apps, mapping tools, and location-based services.
 
@@ -33,6 +36,29 @@ Existing solutions fall short when handling large-scale routes, often degrading 
 - Determining if a user has deviated from a planned route
 - Finding the closest access point to a route from the user's current location
 
+## How It Works
+
+This package implements a two-level spatial indexing approach:
+
+1. **Segment-level R-Tree**: Indexes individual line segments for precise calculations
+2. **Cluster-level R-Tree**: Groups nearby segments into clusters for quick searching
+3. **Adaptive Search**: Starts with a small radius and expands if needed
+4. **Point Projection**: Projects points onto segments for exact distance calculations
+
+The algorithm uses a two-stage approach:
+- First, it quickly identifies promising segments using the spatial index
+- Then, it performs detailed distance calculations only where needed
+- Early termination occurs when a sufficiently close point is found
+
+## Performance
+
+Performance varies based on route size:
+
+| Route Size | Typical Performance |
+|------------|---------------------|
+| 1,000 pts  | 1-3ms per query     |
+| 10,000 pts | 5-20ms per query    |
+| 100,000 pts| 20-100ms per query  |
 
 ## Installation
 
@@ -172,31 +198,6 @@ final nearestPoint = routeIndex.findNearestPoint(
 ```
 
 
-## How It Works
-
-This package implements a two-level spatial indexing approach:
-
-1. **Segment-level R-Tree**: Indexes individual line segments for precise calculations
-2. **Cluster-level R-Tree**: Groups nearby segments into clusters for quick searching
-3. **Adaptive Search**: Starts with a small radius and expands if needed
-4. **Point Projection**: Projects points onto segments for exact distance calculations
-
-The algorithm uses a two-stage approach:
-- First, it quickly identifies promising segments using the spatial index
-- Then, it performs detailed distance calculations only where needed
-- Early termination occurs when a sufficiently close point is found
-
-## Performance
-
-Performance varies based on route size:
-
-| Route Size | Typical Performance |
-|------------|---------------------|
-| 1,000 pts  | 1-3ms per query     |
-| 10,000 pts | 5-20ms per query    |
-| 100,000 pts| 20-100ms per query  |
-
-
 ### SpatialCoordinateAdapter
 
 The package provides an abstract interface for adapting different spatial coordinate systems to work with the package's internal coordinate representations. This adapter allows you to convert between external coordinate formats and the package's `LatLng`, `SegmentCoordinates`, and `Route` types.
@@ -228,8 +229,8 @@ Adapters for Google Maps, Mapbox, etc. coming soon. Contributions welcome!
 
 ## License
 
-[Your license here]
+![MIT](https://github.com/amrahmed242/route_spatial_index/blob/main/LICENSE)
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! Please feel free to submit a Pull Request👨‍💻.
