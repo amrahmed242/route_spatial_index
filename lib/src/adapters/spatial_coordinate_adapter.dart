@@ -19,7 +19,7 @@ abstract class SpatialCoordinateAdapter<T> {
   }
 
   /// Convert from external route to package Route
-  Route fromRoute(List<List<T>> segments) {
+  RouteSegments fromRoute(List<List<T>> segments) {
     throw UnimplementedError('fromRoute() has not been implemented.');
   }
 }

@@ -9,4 +9,4 @@ typedef DistanceCalculator = double Function(LatLng point1, LatLng point2);
 typedef SegmentCoordinates = List<LatLng>;
 
 /// A list of route segments representing a complete route.
-typedef Route = List<SegmentCoordinates>;
+typedef RouteSegments = List<SegmentCoordinates>;
