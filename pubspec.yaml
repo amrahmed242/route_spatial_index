@@ -1,0 +1,17 @@
+name: route_spatial_index
+description: A highly optimized spatial indexing library for efficiently finding the nearest point on a route.
+version: 1.0.0
+homepage: #https://github.com/yourusername/route_spatial_index
+
+environment:
+  sdk: ^3.1.5
+
+dependencies:
+  collection: ^1.17.0
+  equatable: ^2.0.5
+  r_tree: ^3.0.1
+  google_maps_flutter: ^2.5.0
+  
+dev_dependencies:
+  lints: ^2.0.0
+  test: ^1.21.0
