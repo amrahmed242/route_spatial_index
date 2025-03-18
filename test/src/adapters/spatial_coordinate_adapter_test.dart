@@ -1,5 +1,4 @@
 import 'package:route_spatial_index/route_spatial_index.dart';
-import 'package:route_spatial_index/src/adapters/spatial_coordinate_adapter.dart';
 import 'package:test/test.dart';
 
 typedef Coordinates = ({
