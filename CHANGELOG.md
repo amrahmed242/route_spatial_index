@@ -6,6 +6,6 @@
 
 - Expose SpatialCoordinateAdapter and rename `Route` type to `RouteSegments`
 
-## 1.0.2
+## 1.0.3
 
 - update README and fix imports

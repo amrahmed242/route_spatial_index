@@ -7,14 +7,14 @@ import 'lat_lng.dart';
 /// are not required.
 class PointWithDistance extends Equatable {
   /// Creates a new point with distance.
-  /// 
+  ///
   /// [point] is the geographic coordinates of the point.
   /// [distanceInMeters] is the distance from this point to the reference location.
   const PointWithDistance(this.point, this.distanceInMeters);
-  
+
   /// The geographic coordinates of this point.
   final LatLng point;
-  
+
   /// The distance from this point to the reference location, in meters.
   final double distanceInMeters;
 
@@ -33,7 +33,7 @@ class PointWithDistance extends Equatable {
 /// location in meters, and indices to identify which segment it belongs to.
 class SegmentPointWithDistance {
   /// Creates a new point with distance and segment information.
-  /// 
+  ///
   /// [point] is the geographic coordinates of the point.
   /// [distanceInMeters] is the distance from this point to the reference location.
   /// [segmentIndex] identifies which major segment this point belongs to.
@@ -47,13 +47,13 @@ class SegmentPointWithDistance {
 
   /// The geographic coordinates of this point.
   final LatLng point;
-  
+
   /// The distance from this point to the reference location, in meters.
   final double distanceInMeters;
-  
+
   /// The index of the major segment this point belongs to.
   final int segmentIndex;
-  
+
   /// The index of the sub-segment this point belongs to.
   final int subSegmentIndex;
 
