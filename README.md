@@ -2,8 +2,9 @@
 
 # Route Spatial Index 🗺️
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Pub Version](https://img.shields.io/pub/v/route_spatial_index?style=flat-square&logo=dart)](https://pub.dev/packages/route_spatial_index)
 ![Pub Points](https://img.shields.io/pub/points/route_spatial_index)
-![Pub Version](https://img.shields.io/pub/v/route_spatial_index)
+[![StandWithPalestine](https://raw.githubusercontent.com/TheBSD/StandWithPalestine/main/badges/StandWithPalestine.svg)](https://github.com/TheBSD/StandWithPalestine/blob/main/docs/README.md)
 
 A highly optimized spatial indexing library for finding the nearest point on a route. This package is designed for performance with large geographic datasets, making it ideal for navigation apps, mapping tools, and location-based services.
 
